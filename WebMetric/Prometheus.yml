@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s # Intervalo para coleta de métricas
+
+scrape_configs:
+  - job_name: 'dotnet_api' # Nome do job
+    static_configs:
+      - targets: ['host.docker.internal:5137'] # Endpoint da sua API (substitua a porta se necessário)
